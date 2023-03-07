@@ -23,7 +23,7 @@
   "Dispose of `ratom-or-reaction` iff it has no watches."
   [query-vector ratom-or-reaction]
   #?(:cljs
-     (when-not (seq (.-watches ratom-or-reaction))
+     (when-not (seq (.-watch ratom-or-reaction))
        (when-not (ignore-dispose? query-vector)
          (console :warn "Disposing of injected subscription:" query-vector))
        (re-frame.interop/dispose! ratom-or-reaction))))
