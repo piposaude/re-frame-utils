@@ -10,8 +10,9 @@
   "
   (:require
    [re-frame.core :as re-frame]
+   [re-frame.interop :as re-frame.interop]
    [re-frame.loggers :refer [console]]
-   [re-frame.interop :as re-frame.interop]))
+   [reagent.ratom :as ratom] ))
 
 
 (defn- ignore-dispose?
@@ -91,7 +92,7 @@
 (defmethod inject ::query-vector
   [coeffects [id :as query-vector]]
   (let [sub (re-frame/subscribe query-vector)
-        val (deref sub)]
+        val (ratom/run sub)]
     (dispose-maybe query-vector sub)
     (assoc coeffects id val)))
 
