@@ -1,0 +1,12 @@
+{:deps     true
+ :dev-http {8080 "public"}
+ :nrepl    {:port 11011}
+ :builds   {:lib  {:target      :browser
+                   :output-dir  "public/js"
+                   :modules     {:main {:entries [vimsical.re-frame.cofx.inject
+                                                  vimsical.re-frame.fx.track]}}
+                   :profile     :dev}
+            :test {:target      :karma
+                   :output-to   "out/karma_tests.js"
+                   :ns-regexp   "^((?!integration).)*-test$"
+                   :profile     :dev}}}

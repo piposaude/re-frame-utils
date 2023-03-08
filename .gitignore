@@ -10,3 +10,14 @@ pom.xml.asc
 .hgignore
 .hg/
 /resources/out
+
+.envrc
+.direnv/
+shell.nix
+
+.cpcache/
+.shadow-cljs/
+node_modules/
+out/
+public/js/
+yarn-error.log

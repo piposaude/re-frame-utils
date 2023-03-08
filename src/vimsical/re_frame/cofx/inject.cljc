@@ -10,8 +10,9 @@
   "
   (:require
    [re-frame.core :as re-frame]
+   [re-frame.interop :as re-frame.interop]
    [re-frame.loggers :refer [console]]
-   [re-frame.interop :as re-frame.interop]))
+   [reagent.ratom :as ratom] ))
 
 
 (defn- ignore-dispose?
@@ -23,7 +24,7 @@
   "Dispose of `ratom-or-reaction` iff it has no watches."
   [query-vector ratom-or-reaction]
   #?(:cljs
-     (when-not (seq (.-watches ratom-or-reaction))
+     (when-not (seq (.-watch ratom-or-reaction))
        (when-not (ignore-dispose? query-vector)
          (console :warn "Disposing of injected subscription:" query-vector))
        (re-frame.interop/dispose! ratom-or-reaction))))
@@ -91,7 +92,7 @@
 (defmethod inject ::query-vector
   [coeffects [id :as query-vector]]
   (let [sub (re-frame/subscribe query-vector)
-        val (deref sub)]
+        val (ratom/run sub)]
     (dispose-maybe query-vector sub)
     (assoc coeffects id val)))
 
