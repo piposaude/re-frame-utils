@@ -1,4 +1,4 @@
-(ns vimsical.re-frame.cofx.inject
+(ns com.piposaude.re-frame.cofx.inject
   "Inject a subscription in an event handler.
 
   *** Performance caveat ***
@@ -57,7 +57,7 @@
 
   Examples:
 
-  (require '[vimsical.re-frame.cofx.inject :as inject])
+  (require '[com.piposaude.re-frame.cofx.inject :as inject])
 
   ;; Injecting a simple subscription:
 

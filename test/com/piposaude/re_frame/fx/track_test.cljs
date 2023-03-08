@@ -1,10 +1,10 @@
-(ns vimsical.re-frame.fx.track-test
+(ns com.piposaude.re-frame.fx.track-test
   (:require
-   [reagent.core :as r]
-   [vimsical.re-frame.fx.track :as sut]
-   [day8.re-frame.test :as re-frame.test]
    [cljs.test :as t :include-macros true]
-   [re-frame.core :as re-frame]))
+   [com.piposaude.re-frame.fx.track :as sut]
+   [day8.re-frame.test :as re-frame.test]
+   [re-frame.core :as re-frame]
+   [reagent.core :as r]))
 
 
 (def test-db {:source 0 :sink nil})
