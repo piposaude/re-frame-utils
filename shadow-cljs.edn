@@ -3,8 +3,8 @@
  :nrepl    {:port 11011}
  :builds   {:lib  {:target      :browser
                    :output-dir  "public/js"
-                   :modules     {:main {:entries [vimsical.re-frame.cofx.inject
-                                                  vimsical.re-frame.fx.track]}}
+                   :modules     {:main {:entries [com.piposaude.re-frame.cofx.inject
+                                                  com.piposaude.re-frame.fx.track]}}
                    :profile     :dev}
             :test {:target      :karma
                    :output-to   "out/karma_tests.js"

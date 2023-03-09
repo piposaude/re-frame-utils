@@ -1,4 +1,4 @@
-(ns vimsical.re-frame.fx.track
+(ns com.piposaude.re-frame.fx.track
   "Dispatch events when subscriptions change.
 
   Tracking a subscription is a stateful process that needs to be registered and
@@ -17,7 +17,7 @@
 
   Usage:
 
-  (require '[vimsical.re-frame.fx.track :as track])
+  (require '[com.piposaude.re-frame.fx.track :as track])
 
   0. Context
 

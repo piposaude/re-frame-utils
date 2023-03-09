@@ -2,41 +2,21 @@
 
 > Re-frame extensions
 
-[![CircleCI](https://circleci.com/gh/vimsical/re-frame-utils.svg?style=svg)](https://circleci.com/gh/vimsical/re-frame-utils)
-
-[![Clojars Project](https://img.shields.io/clojars/v/re-frame-utils.svg)](https://clojars.org/re-frame-utils)
-
+Pipo Saúde's fork of the currently unmantained [re-frame-utils](https://github.com/den1k/re-frame-utils).
 
 ## Releases and Dependency Information
 
-* [All releases](https://clojars.org/vimsical/re-frame-utils)
+Add it to `deps.edn` (check for latest release tag and sha)
 
-[Leiningen] dependency information:
-
-    [vimsical/re-frame-utils "0.1.0"]
-
-[Maven] dependency information:
-
-    <dependency>
-      <groupId>vimsical</groupId>
-      <artifactId>re-frame-utils</artifactId>
-      <version>0.1.0</version>
-    </dependency>
-
-[Gradle] dependency information:
-
-    compile "vimsical:re-frame-utils:0.1.0"
-
-[Clojars]: http://clojars.org/
-[Leiningen]: http://leiningen.org/
-[Maven]: http://maven.apache.org/
-[Gradle]: http://www.gradle.org/
-
+``` clojure
+io.github.piposaude/re-frame-utils {:git/tag "0.2.0"
+                                    :git/sha "05f5144481d04856520fc2cd672d6bb9c798fe48"}
+```
 
 
 ## Dependencies and Compatibility
 
-Tested against `re-frame 0.9.4` and `clojurescript 1.9.671`.
+Tested against `re-frame 1.3.0` and `clojurescript 1.10.773`.
 
 
 
@@ -48,7 +28,7 @@ Tested against `re-frame 0.9.4` and `clojurescript 1.9.671`.
 
 
 
-#### [Inject](./src/vimsical/re_frame/cofx/inject.cljc)
+#### [Inject](./src/com/piposaude/re_frame/cofx/inject.cljc)
 
 Inject a subscription in an event handler.
 
@@ -58,7 +38,7 @@ Inject a subscription in an event handler.
 
 
 
-#### [Track](./src/vimsical/re_frame/fx/track.cljc)
+#### [Track](./src/com/piposaude/re_frame/fx/track.cljc)
 
 Dynamically dispatch events when subscriptions update.
 
